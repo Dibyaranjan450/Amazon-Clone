@@ -1,30 +1,454 @@
 <!DOCTYPE html>
-
 <html>
+<head>
 
-    <head>
+	<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNNgCGmoDj6O2-AecvZn5rHrQMcqSnMizhtuNfAG0Delt0PkduD58WvaHeM-PthNtrJ2Q&usqp=CAU">
 
-        <title>
-            Amazon.com
-        </title>
+	<title>
+		Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+	</title>
 
-        <style>
+	<style>
 
-            h3{
-            background-color : azure;
-            text-color : skyblue;
-            color : blue
-            }
+		@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Ubuntu&display=swap');
 
-        </style>
+		.top-header{
+			background-color: black;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			padding-left: 10px;
+			padding-top: 2px;
+		}
 
-    </head>
+		.box{
+			background-color: #FEBD69;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 4px;
+			margin-top: 30px;
+		}
 
-    <body>
+		.flex-box{
+			background-color: skyblue;
+			padding: 10px;
+			margin: 2px;
+		}
 
-        <h3> Here the code for the clone. </h3>
-        <p> Here's the code for the 2nd section </p>
+		.image-stats{
+			width: 150px;
+		}
 
-    </body>
+		#header-logo-img{
+			height: 50px;
+			width: 150px;
+			background-color: black;
+			margin: 6px;
+		}
 
+		#header-addrs{
+			color: #fff;
+			width: 225px;
+			margin: 10px;
+			font-size: 20px;
+			font-weight: bold;
+			margin-right: 2px;
+			font-family: 'Ubuntu';
+			text-align: center;
+			background-color: black;
+			border: none;
+		}
+
+		#header-genres{
+			display: flex;
+			width: 70px;
+			height: 36px;
+			font-family: 'Ubuntu';
+			justify-content: center;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px; 
+			text-align: center;
+			border: none;
+		}
+
+		#search-bar{
+			height: 33px;
+			width: 500px;
+		}
+
+		#go-button{
+			height: 39px;
+			width: 45px;
+			background-color: #FEBD69;
+			font-weight: bold;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			font-family: 'Ubuntu';
+			border: none;
+		}
+
+		#head-regions{
+			height: 35px;
+			width: 40px;
+			background-color: black;
+			margin: 15px;
+			margin-left: 25px;
+		}
+
+		#account-lists{
+			color: #fff;
+			padding: 2px;
+			margin: 10px;
+			text-align: left;
+			background-color: black;
+			font-family: 'Ubuntu';
+		}
+
+		#return-order-box{
+			margin: 15px;
+			background-color: black;
+			font-style: 'Ubuntu'
+		}
+
+		#return-order{
+			width: 100px;
+			color: #fff;
+			background-color: black;
+			padding: 5px;
+			text-align: left;
+		}
+
+		#cart-button{
+			padding: 10px;
+			width: 60px;
+			background-color: black;
+			color: #fff;
+			font-family: 'Ubuntu';
+			font-weight: bold;  
+			font-size: 15px; 
+		}
+
+	</style>
+
+	<style>
+
+		.second-header{
+			background-color: #232F3E;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			padding-left: 20px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
+
+		#menu-button{
+			height: 10px;
+			width: 10px;
+		}
+		
+		#all-button{
+			width: 50px;
+			font-family: 'Ubuntu';
+			font-weight: bold;
+			background-color: #232F3E;
+			color: #fff;
+			margin: 4px;
+			padding: 2px;
+			border: none;
+		}
+
+		#button-property{
+			border: none;
+			color: #fff;
+			margin: 5px;
+			background-color: #232F3E;
+		}
+
+		#offer-card{
+			text-align: right;
+			color: #fff;
+			width: 550px;
+			font-family: 'Ubuntu';
+			font-size: 24px;
+			font-weight: bold;
+			padding: 1px;
+			margin: 1px;
+			border: none;
+			background-color: #232F3E; 
+		}
+
+	</style>
+
+	<style>
+
+		#base{
+			position: relative;
+		}
+
+		#base-img{
+			position: relative;
+			z-index: 5;
+		}
+
+		#flex-sec{
+			position: absolute;
+			z-index: 7;
+			background-color: blue;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#flex-boxes{
+
+			background-color: #fff;
+			padding: 2px;
+			margin: 2px;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<div class="top-header">
+
+		<a target="_blank" href="https://www.amazon.in/ref=nav_logo" target="_blank">
+			<img id="header-logo-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmq1YfcNAgvi4gXuqyhPep6nDhRKomd-3d0Q&usqp=CAU">
+		</a>
+
+		<div>
+			<button id="header-addrs">
+				Address
+			</button>
+		</div>
+
+		<div>
+			<input id="header-genres" list="genres" placeholder="All">
+			<datalist id="genres">
+
+				<option value="All Categories"></option>
+				<option value="Deals"></option>
+				<option value="Alexa Skills"></option>
+				<option value="Amazon Devices"></option>
+				<option value="Amazon Fashion"></option>
+				<option value="Amazon Pantry"></option>
+				<option value="Appliances"></option>
+				<option value="Apps & Games"></option>
+				<option value="Baby"></option>
+				<option value="Beauty"></option>
+				<option value="Books"></option>
+				<option value="Car & Motorbike"></option>
+				<option value="Clothing & Accessories"></option>
+				<option value="Collectible"></option>
+				<option value="Computer & Accessories"></option>
+				<option value="Electronics"></option>
+				<option value="Furniture"></option>
+				<option value="Garden & Outdoors"></option>
+				<option value="Giftcard"></option>
+				<option value="Grocery & Gourment Food"></option>
+				<option value="Healt & Personal Care"></option>
+				<option value="Home & Kitchen"></option>
+
+			</datalist>
+		</div>
+
+		<div>
+			<input id="search-bar" type="text" name="search-box">
+		</div>
+
+		<div>
+			<a href="https://www.amazon.in/">
+				<button id="go-button"> Go </button>
+
+			</a>
+		</div>
+
+		<div>
+			<input id="head-regions" list="regions">
+
+			<datalist id="regions">
+				<option value="Afghanistan"></option>
+				<option value="Albania"></option>
+				<option value="Algeria"></option>
+				<option value="Andorra"></option>
+				<option value="Angola"></option>
+				<option value="Antigua and Barbuda"></option>
+				<option value="Argentina"></option>
+				<option value="Armenia"></option>
+				<option value="Austrelia"></option>
+				<option value="Austria"></option>
+				<option value="Azerbaijan"></option>
+				<option value="Bahamas"></option>
+				<option value="Bahrain"></option>
+				<option value="Bangladesh"></option>
+				<option value="Barbados"></option>
+				<option value="Belarus"></option>
+				<option value="Belgium"></option>
+				<option value="Belize"></option>
+				<option value="Benin"></option>
+				<option value="Bhutan"></option>
+				<option value="Bolivia"></option>
+				<option value="Bosnia and Herzegovnia"></option>
+				<option value="Botswana"></option>
+				<option value="Brazil"></option>
+			</datalist>
+
+		</div>
+
+		<div>
+			<button id="account-lists" style="border: none;">
+				Hello, User <br> <b style="font-size: 15px;">Account & Lists</b>
+			</button>
+		</div>
+
+		<div id="return-order-box">
+			<a href="https://www.amazon.in/ap/signin?_encoding=UTF8&accountStatusPolicy=P1&openid.assoc_handle=inamazon&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fcss%2Forder-history%3Fie%3DUTF8%26ref_%3Dnav_orders_first&pageId=webcs-yourorder&showRmrMe=1">
+				
+				<button id="return-order" style="border: none;"> 
+					Returns <br><b style="font-size: 15px;" >  & Orders </b> 
+				</button>
+
+			</a>
+		</div>
+
+		<div>
+			<a href="https://www.amazon.in/gp/cart/view.html?ref_=nav_cart">
+				<button id="cart-button" style="border: none;">
+					Cart
+				</button>
+			</a>
+		</div>
+
+	</div>
+
+
+	<div class="second-header">
+
+		<div>
+			<img id="menu-button" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Symbol_code_ww_45.svg/1024px-Symbol_code_ww_45.svg.png">
+		</div>
+
+		<div>
+			<button id="all-button">
+				All 
+			</button>
+		</div>
+
+		<a href="https://www.amazon.in/gp/sva/dashboard?ref_=nav_cs_apay_fe0c735739554ca1a7cccf7c41941f2f">
+			<div>
+				<button id="button-property">
+					Amazon Pay
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/pantry-online-grocery-shopping-store/b/?ie=UTF8&node=9574332031&ref_=nav_cs_pantry_daaa5674d5e548768cd33d9ecc362a67">
+			<div> 
+				<button id="button-property">
+					Pantry
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery_aaabc3a9e1214048a9a0a73dcc968167">
+			<div>
+				<button id="button-property">
+					Grocery & Gourment Foods
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home_5f0a1657ec2a4557a8233992829feaf3">
+			<div>
+				<button id="button-property">
+					Home & Kitchen
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/gp/goldbox?ref_=nav_cs_gb_5bf06ae8328043a2beb2754f40a54c84">
+			<div>
+				<button id="button-property">
+					Today's Deals
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc_35a9db0a7db34350a3d3cb851062984e">
+			<div>
+				<button id="button-property">
+					Gift Cards
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/Kindle-Store/b/?ie=UTF8&node=1571277031&ref_=nav_cs_kindle_books_fbe4f5e5a26f403a91203de3fe5ab05d">
+			<div>
+				<button id="button-property">
+					Kindle eBooks
+				</button>
+			</div>
+		</a>
+
+		<a href="">
+			<div>
+				<button id="button-property">
+					Pet Supplies
+				</button>
+			</div>
+		</a>
+
+		<a href="https://www.amazon.in/Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets_57065eb9748646eb8c04675172dd0001">
+			<div>
+				<button id="offer-card">
+					Great Freedoom Festival | SHOP NOW >
+				</button>
+			</div>
+		</a>
+
+	</div>
+
+
+	<div id="base">
+
+		<img id="base-img" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Aug21_ART/Xiaomi_Updated4/DesktopHero_Template_1500x6003._CB645812814_.jpg">
+
+		<div id="flex-sec">
+			
+		</div>
+
+	</div>
+
+	<div class="box">
+
+		<div class="flex-box">
+			<img class="image-stats" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/CEPC/AugArt/GW/xcm_banners_dqc_2_186x116_in-en._SY116_CB645422489_.jpg">
+		</div>
+
+		<div class="flex-box">
+			<img class="image-stats" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/CEPC/AugArt/GW/xcm_banners_dqc_1_186x116_in-en._SY116_CB645422465_.jpg">
+		</div>
+
+		<div class="flex-box" >
+			<img class="image-stats" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/CEPC/AugArt/GW/xcm_banners_dqc_3_186x116_in-en._SY116_CB645422466_.jpg">
+		</div>
+
+		<div class="flex-box">
+			<img class="image-stats" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/CEPC/AugArt/GW/xcm_banners_dqc_4_186x116_in-en._SY116_CB645422492_.jpg">
+		</div>
+
+		<div class="flex-box">
+			<img class="image-stats" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/AugART2021/DesktopGateway_CategoryCard_758X6081._SY304_CB645431419_.jpg">
+		</div>
+
+		<div class="flex-box">
+			<img class="image-stats" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/CEPC/AugArt/GW/xcm_banners_dqc_4_186x116_in-en._SY116_CB645422492_.jpg">
+		</div>
+
+	</div>
+
+</body>
 </html>
