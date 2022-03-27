@@ -21,6 +21,6 @@ https://dibyaranjan450.github.io/Amazon-clone/
 
 ## Contributor
 
-```
+`
 Creator of Amazon-Clone @Dibyaranjan450
-```
+`
